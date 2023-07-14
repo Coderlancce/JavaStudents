@@ -1,6 +1,7 @@
 package main.entities;
 
 public enum Course {
+
     JAVA("Java"), SQL("SQL"), MATH("Math"), ENGLISH("English");
 
     public String nameCourse;

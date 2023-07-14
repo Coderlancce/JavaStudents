@@ -1,42 +1,26 @@
 package main;
 
 
-import main.calculators.AverageCalculator;
-import main.factories.IdGenerator;
 import main.factories.StudentsFactory;
-import main.factories.SortedIdGenerator;
 import main.entities.Student;
 import main.inputs.NumberStudents;
-import main.view.ShowDataStudent;
-
-import java.util.HashMap;
-import java.util.Map;
+import main.storage.StudentsStorage;
+import main.view.ShowAverageCourse;
+import main.view.ShowAvgRank;
+import main.view.ShowOrderRanks;
+import main.view.ShowStudentData;
 
 public class Main {
     public static void main(String[] args) {
-        // Ask number of students
-        NumberStudents numberStudents = new NumberStudents();
-        // Save number
-        int numStudents = numberStudents.getInput();
-        // Generate ID for student
-        IdGenerator idGenerator = new SortedIdGenerator();
-        // Generate Score
-        StudentsFactory studentsFactory = new StudentsFactory(idGenerator);
-        // Assign the score to course
-        Map<Student, AverageCalculator> studentAverages = new HashMap<>();
-        for (int i = 0; i < numStudents; i++) {
-            Student student = studentsFactory.buildStudentWithScores();
-            // Present Information
-            ShowDataStudent showDataStudent = new ShowDataStudent();
-            showDataStudent.showDetailsStudent(student);
-            AverageCalculator averageCalculator = showDataStudent.showDataStudentAvrAndRank(student);
-            studentAverages.put(student, averageCalculator);
+        int numberStudents = NumberStudents.getNumber();
+        for (int i = 0; i < numberStudents; i++) {
+            StudentsFactory student = new StudentsFactory();
+            Student createdStudent = student.factoryStudent();
+            StudentsStorage.addStudent(createdStudent);
+            ShowStudentData.detailsStudent(createdStudent);
+            ShowAvgRank.showAvgRank(createdStudent);
         }
-        // Display all students sorted by average and rank
-        ShowDataStudent showDataStudent = new ShowDataStudent();
-        showDataStudent.showAllStudents(studentAverages);
-
-        ShowDataStudent showDataScores = new ShowDataStudent();
-        showDataScores.showClassAverages(studentsFactory.getClassScores());
+        ShowOrderRanks.showRanking(StudentsStorage.getStudents());
+        ShowAverageCourse.showCourseAverage(StudentsStorage.getStudents());
     }
 }
