@@ -24,16 +24,6 @@ The project uses SOLID principles and design patterns such as Singleton and Fact
 - After inputting all scores, the program displays individual scores, average score, and rank for each student.
 - At the end, the program displays class average for each course.
 
-## Key Classes & Interfaces
-
-- UserInput: An interface for getting input from the user.
-- NumberStudents, ScoreInput: Implementations of UserInput, for getting the number of students and their scores respectively.
-- IdGenerator, SortedIdGenerator: For generating unique student IDs.
-- StudentsFactory: A Factory class for creating student objects with scores.
-- Student, Course: Entity classes representing Student and Course.
-- ShowDataStudent, AverageListSingleton: For displaying student data and managing a singleton list of averages respectively.
-- AverageCalculator, RankCalculator: For calculating averages and ranks.
-
 ## Future Improvements
 
 In the future, the project could be expanded to:
