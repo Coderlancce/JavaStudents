@@ -1,4 +1,4 @@
-package main.view;
+package main.generators;
 
 import java.util.ArrayList;
 import java.util.Collections;

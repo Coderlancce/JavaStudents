@@ -1,6 +1,8 @@
 package main.view;
 
 import main.entities.Student;
+import main.generators.GenerateRank;
+import main.generators.GenerateText;
 
 import java.util.Collections;
 import java.util.Comparator;

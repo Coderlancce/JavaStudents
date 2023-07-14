@@ -2,7 +2,8 @@ package main.view;
 
 import main.entities.Course;
 import main.entities.Student;
-import main.factories.AverageGenerator;
+import main.generators.AverageGenerator;
+import main.generators.GenerateText;
 
 import java.util.ArrayList;
 import java.util.List;

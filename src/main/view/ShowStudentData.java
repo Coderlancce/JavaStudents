@@ -2,6 +2,7 @@ package main.view;
 
 import main.entities.Course;
 import main.entities.Student;
+import main.generators.GenerateText;
 
 import java.util.Map;
 

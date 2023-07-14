@@ -1,4 +1,4 @@
-package main.view;
+package main.generators;
 
 public class GenerateText {
     public static void generate(String text){

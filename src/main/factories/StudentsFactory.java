@@ -2,6 +2,9 @@ package main.factories;
 
 import main.entities.Course;
 import main.entities.Student;
+import main.generators.AverageGenerator;
+import main.generators.CoursesScoreGenerator;
+import main.generators.SortedIdGenerator;
 
 import java.util.Map;
 

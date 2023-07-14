@@ -1,6 +1,6 @@
 package main.inputs;
 
-import main.view.GenerateText;
+import main.generators.GenerateText;
 
 public class NumberStudents{
     public static int getNumber() {

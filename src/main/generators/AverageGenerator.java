@@ -1,4 +1,4 @@
-package main.factories;
+package main.generators;
 
 import main.entities.Course;
 

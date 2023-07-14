@@ -1,9 +1,8 @@
 package main.view;
 
 import main.entities.Course;
+import main.generators.GenerateText;
 import main.inputs.InputNumber;
-
-import java.util.Map;
 
 public class ShowRequest{
     public static int RequestScore(String id, Course course){
